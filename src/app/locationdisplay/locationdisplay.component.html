@@ -1,0 +1,50 @@
+<div class="head">
+  <h1>Skycliffit</h1>
+
+ <button class="btnadd">Add new Location</button>
+</div>
+
+<div class="bodycontainer">
+
+<table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Dec</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>state</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th>Phone</th>
+      <th>Phone2</th>
+      <th>Fax</th>
+      <th>Website</th>
+
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of arr">
+        <td >{{item.Name}}</td>
+        <td  >{{item.Dec}}</td>
+        <td> {{item.Address}}</td>
+        <td> {{item.City}}</td>
+        <td> {{item.State}}</td>
+        <td> {{item.Zip}}</td>
+        <td> {{item.Country}}</td>
+        <td> {{item. Phone}}</td>
+        <td> {{item.Phone2}}</td>
+        <td> {{item.Fax}}</td>
+        <td> {{item.Website}}</td>
+
+      <p>
+          <button (click)='deleteTask(item)' type="button" class="btn btn-default" aria-label="Left Align">Delete</button>
+          <!-- <a href="editdisplay/editdisplay.component.html">Edit</a> -->
+          <a class="nav-link" href="editdisplay">Search</a>
+        <!-- <a href=  <button (click)=onEditTaskClick(item)' type="button" class="btn btn-default" aria-label="Left Align">Edit</button> -->
+      </p>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
